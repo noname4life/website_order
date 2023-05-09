@@ -17,3 +17,4 @@ Required Installations:
 # Starting the Fullstack Service:
 1) In the `\backend` directory, run the command: `python main.py`
 2) In another terminal, go to the `\frontend` directory then run the command: `python main.py`
+3) View the frontend service via `localhost:5001`
