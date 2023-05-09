@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Super Delivery Services</title>
+        <!-- StyleSheets -->
+        <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}" />
+    </head>
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <img src="{{url_for('static',filename='images/preloader.gif')}}" alt="" />
+        </div>
+    
+        <header class="header">
+            <a href="/" class="logo">Delive<span class="yellow">roo</span></a>
+      
+            <nav class="navbar_other">
+              <a href="home" class="home-btn">Home</a>
+              <a href="home#services">Services</a>
+              <a href="home#about">About Us</a>
+              <a href="home#contact">Contact Us</a>
+              <a href="" class="btn">Make an Order</a>
+            </nav>
+      
+            <!-- Hamburger -->
+            <div class="hamburger">
+              <img src="{{url_for('static',filename='images/grid-outline.svg')}}" alt="" />
+            </div>
+        </header>
+
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="content">
+            <h1>Our Products</h1>
+
+            {% block content %}
+            <table id="data" class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Price (Php)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for product in products %}
+                  <tr>
+                    <td>{{ product.product_name }}</td>
+                    <td>{{ product.product_category }}</td>
+                    <td>{{ product.product_value }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            {% endblock %}
+
+
+
+            </div>
+            <div class="image">
+            <img src="{{url_for('static',filename='images/Delivery address.svg')}}" alt="" />
+            </div>
+        </section>
+
+        <!-- Scripts -->
+        <script src="{{url_for('static',filename='js/main.js')}}"></script>
+    </body>
+</html>
