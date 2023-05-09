@@ -91,6 +91,22 @@ section {
   border-color: var(--yellow);
 }
 
+.navbar_other a {
+  font-weight: 500;
+  transition: var(--transition);
+  padding: 1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar_other a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.navbar_other a:hover {
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+
 .btn {
   display: inline-block;
   color: var(--yellow);
