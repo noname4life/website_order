@@ -1,5 +1,7 @@
 # website_order
 
+This project involves creating a fullstack service which accept sales orders from customers
+
 Required Installations:
 1) [Miniconda](https://docs.conda.io/en/latest/miniconda.html) for Python Environments
 2) [Windows Subsystem for Linux](https://www.ceos3c.com/wsl-2/install-wsl2-with-windows-terminal/)
